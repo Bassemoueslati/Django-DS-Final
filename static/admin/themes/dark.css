@@ -1,0 +1,79 @@
+/* static/admin/css/dark.css */
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+:root {
+  /* Couleurs de base */
+  --primary: #121212;
+  --secondary: #1e1e1e;
+  --text:#121212;
+  --header: #1a1a1a;
+  --accent: #4dabf7;
+  --hover: #2a2a2a;
+  --border: #444;
+  --error: #ff6b6b;
+  --button: #2a2a2a;
+  --button-hover: #3a3a3a;
+  --link-hover: #63b4ff;
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #aaaaaa;
+}
+
+/* Base */
+body {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+/* Header */
+#header {
+  background-color: var(--header) !important;
+  color: white !important;
+}
+
+/* Boutons */
+.btn-success {
+  background: linear-gradient(135deg, #1a7a2e 0%, #125a24 100%);
+  color: white;
+  border-color: #125a24;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #0a3d6b 0%, #0d6b7c 100%);
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #3a0101 0%, #9c2525 100%);
+  color: white;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #3d4042 0%, #0a3d6b 100%);
+  color: white;
+}
+
+/* Formulaires */
+input, textarea, select {
+  background-color: var(--secondary);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+/* Sidebar */
+[class*=sidebar-dark-] {
+  background-color: var(--sidebar-bg);
+}
+
+[class*=sidebar-dark-] .sidebar a {
+  color: var(--sidebar-text);
+}
+
+/* Tableaux */
+#result_list {
+  background-color: var(--primary);
+}
+
+/* Ajoutez ici tous vos autres styles spécifiques au thème sombre */
