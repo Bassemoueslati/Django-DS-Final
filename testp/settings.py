@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'graphene_django',
     'main',
     'drf_yasg',
-    'graphene_file_upload',  # Ajout de graphene_file_upload
+    'graphene_file_upload',
+    # Ajout de graphene_file_upload
    
 ]
 JAZZMIN_SETTINGS = {
@@ -207,6 +208,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
     ],
+    
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    
 }
 
 GRAPHENE = {

@@ -49,4 +49,6 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('graphql/', csrf_exempt(FileUploadGraphQLView.as_view(graphiql=True))),
     path("switch-theme/", switch_theme, name="switch_theme"),
+    path('views/', include(router.urls)),
+    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
