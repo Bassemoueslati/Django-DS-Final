@@ -73,7 +73,7 @@ Changer de thème
 graphql
 
 mutation {
-    switchTheme(themeId: 3) {
+    switchTheme(themeId: 5) {
         success
         activeThemeCssUrl
         suggestions
