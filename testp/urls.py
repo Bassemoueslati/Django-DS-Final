@@ -22,7 +22,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from graphene_django.views import GraphQLView
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_protect
 from testp import settings
 from django.conf.urls.static import static
 from graphene_file_upload.django import FileUploadGraphQLView
@@ -47,7 +47,7 @@ urlpatterns = [
     # Swagger UI et Redoc
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-    path('graphql/', csrf_exempt(FileUploadGraphQLView.as_view(graphiql=True))),
+    path('graphql/', csrf_protect(FileUploadGraphQLView.as_view(graphiql=True))),
     path("switch-theme/", switch_theme, name="switch_theme"),
     path('views/', include(router.urls)),
     
