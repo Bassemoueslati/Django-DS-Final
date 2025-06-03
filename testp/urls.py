@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from main.views import AdminThemeViewSet, switch_theme
+from main.views import AdminThemeViewSet
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -48,7 +48,7 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('graphql/', csrf_protect(FileUploadGraphQLView.as_view(graphiql=True))),
-    path("switch-theme/", switch_theme, name="switch_theme"),
+    
     path('views/', include(router.urls)),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
