@@ -16,6 +16,7 @@ from celery import Celery
 from graphene_file_upload.scalars import Upload
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'main',
     'drf_yasg',
     'graphene_file_upload',
+    'django_celery_beat'
     # Ajout de graphene_file_upload
    
 ]
